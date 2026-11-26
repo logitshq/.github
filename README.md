@@ -7,8 +7,8 @@ Shared contribution guidelines, security reporting instructions, and issue and p
 - Use `main` as the default branch and create company repositories as private unless their contents are approved for public release.
 - Grant access explicitly through project teams or repository collaborators; use the lowest role needed.
 - Keep at least two designated organization owners, and require two-factor authentication for members and outside collaborators.
-- For public repositories, protect the default branch with pull requests, one approving review, resolved review conversations, and no force pushes or branch deletion. Organization owners may bypass review requirements within a pull request when necessary.
-- On GitHub Free, private-repository branch protection and organization-wide rulesets require a paid plan. Apply the same review process by convention until protections are available.
+- Protect the default branch of every active repository, public or private, with branch protection or a ruleset: pull requests, required CI checks once they run, and no force pushes or branch deletion. Public repositories also require one approving review and resolved review conversations. Organization owners may bypass review requirements within a pull request when necessary.
+- The organization is on GitHub Team, so branch protection and rulesets are available for private repositories as well as public ones. Protection is configured per repository and is not applied automatically, so check a repository's settings rather than assuming its default branch is protected.
 - Prefer squash merges and automatically delete merged branches.
 - Enable dependency alerts and security updates. Enable secret scanning and push protection wherever the plan supports them.
 - Keep workflow tokens read-only by default. Grant write access explicitly in jobs that need it, pin actions to full commit SHAs, and approve workflows from external contributors.
